@@ -1,6 +1,5 @@
 package com.mysite.jumpto.question;
 
-import java.util.List;
 import java.security.Principal;
 
 import org.springframework.stereotype.Controller;

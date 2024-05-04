@@ -2,6 +2,7 @@ package com.mysite.jumpto.question;
 
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.Set;
 
 import com.mysite.jumpto.answer.Answer;
 import com.mysite.jumpto.user.SiteUser;
@@ -15,6 +16,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.ManyToMany;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -42,4 +44,7 @@ public class Question {
     private SiteUser author;
     
     private LocalDateTime modifyDate;
+    
+    @ManyToMany(fetch=FetchType.EAGER)
+    Set<SiteUser> voter;
 }
